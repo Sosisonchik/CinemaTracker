@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+
+    android:orientation="vertical" >
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="10dp"
+
+        android:clickable="true"
+
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="5dp"
+        app:contentPadding="7dp"
+        app:cardElevation="5dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/poster_image"
+                android:layout_width="105dp"
+                android:layout_height="145dp"
+
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+
+                android:layout_marginEnd="10dp"
+
+                app:riv_corner_radius="5dp" />
+
+            <TextView
+                android:id="@+id/poster_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColor="@android:color/white"
+                android:textSize="21sp"
+
+                android:layout_toEndOf="@+id/poster_image"
+
+                tools:text="Jurasic World 2" />
+
+            <ListView
+                android:id="@+id/poster_time_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@android:color/transparent"
+
+                android:layout_toEndOf="@id/poster_image"
+                android:layout_below="@+id/poster_title"
+
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+
+                android:scrollbarSize="0dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="2dp"
+
+                tools:listitem="@layout/time_item" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
